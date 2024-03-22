@@ -8,12 +8,14 @@ import './App.css';
 const App = () => {
     const [robots, setRobots] = useState([]);
     const [searchfield, setSearchfield] = useState('');
+    const [count, setCount] = useState(0);
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then((response) => response.json())
             .then((users) => setRobots(users));
-    },[]);
+            console.log(count)
+    }, [count]);//only run if count changes
 
     const onSearchChange = (event) => {
         setSearchfield(event.target.value);
@@ -27,6 +29,7 @@ const App = () => {
     ) : (
         <div className="tc">
             <h1 className="f1">Robofriends</h1>
+            <button onClick={() => setCount(count + 1)}>Click me!</button>
             <SearchBox searchChange={onSearchChange} />
             <Scroll>
                 <ErrorBoundry>
