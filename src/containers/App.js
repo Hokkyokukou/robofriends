@@ -9,26 +9,10 @@ const App = () => {
     const [robots, setRobots] = useState([]);
     const [searchfield, setSearchfield] = useState('');
 
-    // class App extends Component {
-    //     constructor() {
-    //         super();
-    //         this.state = {
-    //             robots: [],
-    //             searchfield: '',
-    //         };
-    //     }
-
-    // componentDidMount() {
-    //     fetch('https://jsonplaceholder.typicode.com/users')
-    //         .then((response) => response.json())
-    //         .then((users) => this.setState({ robots: users }));
-    // }
-
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then((response) => response.json())
             .then((users) => setRobots(users));
-            //console.log(robots, searchfield);
     },[]);
 
     const onSearchChange = (event) => {
