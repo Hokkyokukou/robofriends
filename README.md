@@ -1,4 +1,5 @@
-### Robofriends 🤖✨
+### Robofriends 🤖😄✨
+
 
 > **Project Overview:**  
 > _This project is designed to introduce you to one of the most widely used frontend libraries among modern web developers: ReactJS. You will create a sleek, efficient, and responsive application that retrieves data from an API, allowing you to search through a collection of robot friends interactively._
