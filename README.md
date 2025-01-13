@@ -33,7 +33,7 @@ Robofriends aims to demonstrate key skills, including:
 
 3. **Launch the application:**
    ```bash
-   npm start
+   npm run dev
    ```
 
 ---
